@@ -35,6 +35,8 @@ int main()
 		cout << LOTO[Index] << ", ";
 	}
 
+	cout << "\n *^^*";
+
 	return 0;
 }
 
