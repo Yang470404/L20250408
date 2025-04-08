@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <string>
 
-#define LOTO_NUMBER	45
+#define LOTTO_NUMBER	45
 
 using namespace std;
 
@@ -10,29 +10,29 @@ int main()
 {
 	//init
 	srand((unsigned int)time(NULL));
-	int LOTO[LOTO_NUMBER] = { 0, };
-	for (int Index = 0; Index < LOTO_NUMBER; Index++)
+	int LOTTO[LOTTO_NUMBER] = { 0, };
+	for (int Index = 0; Index < LOTTO_NUMBER; Index++)
 	{
-		LOTO[Index] = Index + 1;
+		LOTTO[Index] = Index + 1;
 	}
 
 	//shuffle
 	int Temp = 0;
-	for (int Count = 0; Count < LOTO_NUMBER * 100; Count++)
+	for (int Count = 0; Count < LOTTO_NUMBER * 100; Count++)
 	{
-		int First = rand() % LOTO_NUMBER;
-		int Second = rand() % LOTO_NUMBER;
-		Temp = LOTO[First];
-		LOTO[First] = LOTO[Second];
-		LOTO[Second] = Temp;
+		int First = rand() % LOTTO_NUMBER;
+		int Second = rand() % LOTTO_NUMBER;
+		Temp = LOTTO[First];
+		LOTTO[First] = LOTTO[Second];
+		LOTTO[Second] = Temp;
 	}
 
 	//print
-	cout << "Loto Number : ";
+	cout << "Lotto Number : ";
 
 	for (int Index = 0; Index < 6; Index++)
 	{
-		cout << LOTO[Index] << ", ";
+		cout << LOTTO[Index] << ", ";
 	}
 
 	cout << "\n *^^*";
